@@ -1,13 +1,18 @@
 import React from "react";
+import styled from "styled-components";
+
+const Img = styled.img`
+  border: 25px slateblue solid;
+  padding: 25px;
+  margin: 10px;
+  max-width: 30vw;
+`;
 
 const ImgBox = props => {
   return (
     <div class="img-box" key={props.id}>
       <h1>NASA Photo of the Day</h1>
-      <img src={props.hdurl} />
-      <h2>Photographer: {props.copyright}</h2>
-      <h3>Date taken: {props.date}</h3>
-      <p>{props.explanation}</p>
+      <Img src={props.hdurl}></Img>
     </div>
   );
 };

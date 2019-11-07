@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ImgBox from "./ImgBox";
+import Content from "./Content";
+
 const ImgList = () => {
   const [image, setImage] = useState([]);
 
@@ -17,10 +19,11 @@ const ImgList = () => {
   }, []);
   return (
     <div>
-      <ImgBox
+      <ImgBox hdurl={image.url} />
+      <Content
         image={image}
         title={image.title}
-        hdurl={image.url}
+        copyright={image.copyright}
         explanation={image.explanation}
         date={image.date}
       />
